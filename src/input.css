@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-clr: 255 200 0;
+	--secondary-clr: 33 37 41;
+}
+html,
+body {
+	@apply text-slate-500;
+}
+@layer utilities {
+	.text-huge {
+		font-size: clamp(3rem, 3rem + 2vw, 4.625rem);
+		line-height: 1;
+	}
+	.subhead {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+}

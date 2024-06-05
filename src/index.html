@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Agency Template Clone</title>
+		<link
+			rel="stylesheet"
+			href="./output.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="">
+		<header class="bg-[image:url('./assets/img/header-bg.jpg')] bg-cover bg-center min-h-screen grid place-items-center">
+			<nav
+				id="nav"
+				class="bg-secondary fixed z-10 top-0 left-0 inset-x-0 py-6 transition-all ease-in-out lg:bg-secondary/50 lg:data-[shrink]:bg-secondary/100 lg:py-8 lg:data-[shrink]:py-6 group"
+			>
+				<div class="container">
+					<div class="flex items-center justify-between">
+						<div class="w-36 mt-1.5 transition-[width] ease-in-out lg:w-48 lg:group-data-[shrink]:w-36">
+							<img
+								src="./assets/img/navbar-logo.svg"
+								alt="logo"
+								class=""
+							/>
+						</div>
+						<!-- Desktop -->
+						<ul class="hidden gap-8 lg:flex">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#services"
+									class="py-2 block"
+									>services</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#portfolio"
+									class="py-2 block"
+									>portfolio</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#about"
+									class="py-2 block"
+									>about</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#team"
+									class="py-2 block"
+									>team</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#contact"
+									class="py-2 block"
+									>contact</a
+								>
+							</li>
+						</ul>
+						<!-- Mobile -->
+						<button
+							id="menuBtn"
+							class="flex items-center gap-2 border rounded border-zinc-400/20 p-2.5 px-3.5 uppercase text-xs tracking-tight text-zinc-400 font-bold ring-zinc-400 transition-all focus:ring-4 lg:hidden"
+						>
+							Menu <i class="fa-solid fa-bars"></i>
+						</button>
+					</div>
+					<!-- Mobile -->
+					<div
+						id="menu"
+						data-idle
+						class="bg-secondary left-0 top-full inset-x-0 data-[idle]:max-h-0 data-[active]:max-h-[1000px] overflow-hidden transition-all data-[idle]:duration-[400ms] data-[idle]:ease-out data-[active]:duration-700 data-[active]:ease-in block lg:hidden"
+					>
+						<ul class="py-6">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#services"
+									class="py-2 block"
+									>services</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#portfolio"
+									class="py-2 block"
+									>portfolio</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#about"
+									class="py-2 block"
+									>about</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#team"
+									class="py-2 block"
+									>team</a
+								>
+							</li>
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+								<a
+									href="#contact"
+									class="py-2 block"
+									>contact</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="text-center space-y-8 text-white lg:space-y-16">
+				<div class="space-y-6 pt-24">
+					<div class="font-serif italic capitalize text-2xl lg:text-4xl">welcome to our studio!</div>
+					<div class="uppercase text-huge font-bold">it's nice to meet you</div>
+				</div>
+				<button class="rounded p-5 px-12 uppercase font-bold bg-primary transition hover:bg-primary-dark lg:text-lg">tell me more</button>
+			</div>
+		</header>
+		<section
+			id="services"
+			class="py-16 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+		>
+			<div class="container">
+				<hgroup class="text-center">
+					<h2 class="uppercase text-4xl leading-[4rem] font-bold">services</h2>
+					<p class="font-serif italic font-medium">Lorem ipsum dolor sit amet consectetur.</p>
+				</hgroup>
+				<div class="grid grid-cols-1 gap-4 mt-16 lg:grid-cols-3">
+					<div class="flex flex-col items-center gap-3">
+						<div class="bg-primary rounded-full w-fit aspect-square">
+							<i class="fa-solid fa-cart-shopping text-white text-5xl p-5"></i>
+						</div>
+						<hgroup class="text-center space-y-4">
+							<h3 class="font-bold text-xl">E-Commerce</h3>
+							<p class="font-serif">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ex iusto aliquam, officiis qui exercitationem</p>
+						</hgroup>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<div class="bg-primary rounded-full w-fit aspect-square">
+							<i class="fa-solid fa-laptop text-white text-5xl p-5"></i>
+						</div>
+						<hgroup class="text-center space-y-4">
+							<h3 class="font-bold text-xl">Responsive Design</h3>
+							<p class="font-serif">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ex iusto aliquam, officiis qui exercitationem</p>
+						</hgroup>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<div class="bg-primary rounded-full w-fit aspect-square">
+							<i class="fa-solid fa-lock text-white text-5xl p-5"></i>
+						</div>
+						<hgroup class="text-center space-y-4">
+							<h3 class="font-bold text-xl">Web Security</h3>
+							<p class="font-serif">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ex iusto aliquam, officiis qui exercitationem</p>
+						</hgroup>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			id="portfolio"
+			class="py-16 relative z-0 bg-slate-100 [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+		>
+			<div class="container">
+				<hgroup class="text-center">
+					<h2 class="uppercase text-4xl leading-[4rem] font-bold">portfolio</h2>
+					<p class="font-serif italic font-medium">Lorem ipsum dolor sit amet consectetur.</p>
+				</hgroup>
+				<div
+					id="portfolioGrid"
+					class="mt-16 grid grid-cols-[repeat(auto-fill,minmax(min(300px,100%),1fr))] gap-4 lg:gap-6"
+				>
+					<!-- generated by js -->
+				</div>
+			</div>
+		</section>
+		<section
+			id="about"
+			class="py-16 relative z-0 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+		>
+			<div class="container max-w-screen-lg">
+				<hgroup class="text-center">
+					<h2 class="uppercase text-4xl leading-[4rem] font-bold">about</h2>
+					<p class="font-serif italic font-medium">Lorem ipsum dolor sit amet consectetur.</p>
+				</hgroup>
+				<div
+					id="timeline"
+					class="mt-16"
+				>
+					<!-- generated by js -->
+				</div>
+			</div>
+		</section>
+		<dialog
+			id="dialog"
+			class="absolute left-0 top-0 my-6 min-h-fit h-fit bg-transparent backdrop:bg-black/70"
+		>
+			<div class="flex flex-col items-center bg-white relative py-28 px-6 rounded-lg text-center">
+				<button
+					data-close
+					class="absolute right-4 top-2 w-12 text-zinc-500 transition hover:text-zinc-300"
+				>
+					<svg
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+					>
+						<title>window-close</title>
+						<path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" />
+					</svg>
+				</button>
+				<hgroup class="space-y-4">
+					<h2 class="projectName text-5xl text-zinc-800 font-bold uppercase">project name</h2>
+					<p class="subheading text-zinc-500 font-serif italic">Lorem ipsum dolor sit amet consectetur.</p>
+				</hgroup>
+				<div class="py-8">
+					<img
+						src="./assets/img/portfolio/1.jpg"
+						alt=""
+					/>
+				</div>
+				<p class="desc font-serif text-zinc-700 font-medium">
+					Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+					officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+				</p>
+				<div class="my-8">
+					<p class="font-bold text-zinc-800">Client: <span class="client text-zinc-700 capitalize font-semibold">threads</span></p>
+					<p class="font-bold text-zinc-800">Category <span class="category text-zinc-700 capitalize font-semibold">illustration</span></p>
+				</div>
+				<button
+					data-close
+					class="bg-primary flex items-center gap-3 text-white font-bold uppercase text-lg p-4 px-8 rounded-lg transition hover:bg-primary-dark"
+				>
+					<i class="fa-solid fa-xmark"></i>
+					close project
+				</button>
+			</div>
+		</dialog>
+		<script src="./script.js"></script>
+	</body>
+</html>
