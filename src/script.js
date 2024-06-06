@@ -155,7 +155,7 @@ class Portfolio {
 			</div>
 		</div>
 		<hgroup class="text-center py-6">
-			<h3 class="font-bold text-xl capitalize">${client}</h3>
+			<h3 class="font-bold text-xl capitalize lg:text-2xl">${client}</h3>
 			<p class="font-serif italic capitalize">${category}</p>
 		</hgroup>
 		`;
@@ -218,17 +218,17 @@ class About {
 	}
 	buildCard({ i: index, imgSrc, dateInfo, label, content }) {
 		const div = document.createElement("div");
-		div.className = "relative grid grid-rows-1 grid-cols-[90px_1fr] gap-4 lg:gap-10 lg:grid-cols-[1fr_150px_1fr] items-start pb-12 lg:pb-28";
+		div.className = "relative grid grid-rows-1 grid-cols-[90px_1fr] gap-4 lg:gap-10 lg:grid-cols-[1fr_200px_1fr] items-start pb-12 lg:pb-28";
 		if (index % 2 === 0) {
 			div.innerHTML = `
 			<!-- line -->
 						<div class="absolute bg-slate-200 w-0.5 h-full left-11 lg:left-1/2 lg:-translate-x-1/2"></div>
 						<div class="text-start lg:text-end space-y-2 col-start-2 lg:col-start-1 col-span-1 row-start-1">
-							<div class="space-y-1">
-								<div class="subhead text-zinc-800 font-bold tracking-widest capitalize">${dateInfo}</div>
-								<h3 class="font-bold tracking-widest text-xl capitalize">${label}</h3>
+							<div class="space-y-2 text-xl lg:text-2xl">
+								<div class="text-zinc-800 font-bold tracking-widest capitalize">${dateInfo}</div>
+								<h3 class="font-bold tracking-widest capitalize">${label}</h3>
 							</div>
-							<p class="text-start lg:text-end">
+							<p class="text-start lg:max-w-[34ch] lg:ml-auto lg:text-end lg:text-lg">
 								${content}
 							</p>
 						</div>
@@ -245,11 +245,11 @@ class About {
 			<!-- line -->
 			<div class="absolute bg-slate-200 w-0.5 h-full left-11 lg:left-1/2 lg:-translate-x-1/2"></div>
 			<div class="text-start lg:text-start space-y-2 col-start-2 lg:col-start-3 col-span-1 row-start-1">
-				<div class="space-y-1">
-					<div class="subhead text-zinc-800 font-bold tracking-widest capitalize">${dateInfo}</div>
-					<h3 class="font-bold tracking-widest text-xl capitalize">${label}</h3>
+				<div class="space-y-1 text-xl lg:text-2xl">
+					<div class="text-zinc-800 font-bold tracking-widest capitalize">${dateInfo}</div>
+					<h3 class="font-bold tracking-widest capitalize">${label}</h3>
 				</div>
-				<p class="text-start lg:text-start">
+				<p class="text-start lg:text-start lg:text-lg">
 					${content}
 				</p>
 			</div>
@@ -267,3 +267,84 @@ class About {
 }
 const about = new About(timelineData);
 about.render();
+
+/* team */
+class Team {
+	constructor(initialData) {
+		this.data = initialData;
+	}
+	render() {
+		const teamMembers = document.querySelector("#team_members");
+		teamMembers.innerHTML = "";
+		for (const obj of this.data) {
+			const card = this.buildCard(obj);
+			teamMembers.appendChild(card);
+		}
+	}
+	buildCard({ imgSrc, name, role }) {
+		const div = document.createElement("div");
+		div.className = "flex flex-col items-center";
+		div.innerHTML = `
+		<div class="w-64 mt-12 mb-6 border-8 border-zinc-300 rounded-full overflow-hidden lg:w-72 lg:border-[10px]">
+		<img
+			src=${imgSrc}
+			alt=${name}
+		/>
+	</div>
+	<div class="text-center">
+		<h3 class="capitalize font-bold text-2xl lg:text-3xl">${name}</h3>
+		<p class="capitalize font-serif text-lg">${role}</p>
+	</div>
+	<div class="flex items-center gap-6 mt-5">
+		<div class="relative group">	
+			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<a
+				href="#"
+				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
+			>
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+		</div>
+		<div class="relative group">	
+			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<a
+				href="#"
+				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
+			>
+				<i class="fa-brands fa-facebook-f"></i>
+			</a>
+		</div>
+		<div class="relative group">	
+			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<a
+				href="#"
+				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
+			>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</a>
+		</div>
+	</div>
+		`;
+		return div;
+	}
+}
+const teamData = [
+	{
+		imgSrc: "./assets//img/team/1.jpg",
+		name: "parveen anand",
+		role: "lead designer",
+	},
+	{
+		imgSrc: "./assets//img/team/2.jpg",
+		name: "diana petersen",
+		role: "lead marketer",
+	},
+	{
+		imgSrc: "./assets//img/team/3.jpg",
+		name: "larry parker",
+		role: "lead developer",
+	},
+];
+
+const team = new Team(teamData);
+team.render();
