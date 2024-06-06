@@ -348,3 +348,87 @@ const teamData = [
 
 const team = new Team(teamData);
 team.render();
+
+/* Form Validation */
+const contactForm = document.querySelector("#contactForm");
+
+const nameInput = contactForm.querySelector("input#username");
+const emailInput = contactForm.querySelector("input#email");
+const phoneNumberInput = contactForm.querySelector("input#phoneNumber");
+const messageTextArea = contactForm.querySelector("textarea#message");
+
+const nameInputErrorBox = nameInput.parentElement.parentElement.querySelector(".errorBox");
+const emailInputErrorBox = emailInput.parentElement.parentElement.querySelector(".errorBox");
+const phoneNumberInputErrorBox = phoneNumberInput.parentElement.parentElement.querySelector(".errorBox");
+const messageTextAreaErrorBox = messageTextArea.parentElement.parentElement.querySelector(".errorBox");
+
+nameInput.addEventListener("input", (e) => {
+	nameInputErrorBox.textContent = "";
+
+	if (nameInput.validity.valid) {
+		nameInputErrorBox.textContent = "";
+		nameInput.removeAttribute("data-error");
+	} else {
+		nameInput.setAttribute("data-error", "");
+		showError(nameInput, nameInputErrorBox);
+	}
+});
+emailInput.addEventListener("input", (e) => {
+	emailInputErrorBox.textContent = "";
+
+	if (emailInput.validity.valid) {
+		emailInputErrorBox.textContent = "";
+		emailInput.removeAttribute("data-error");
+	} else {
+		emailInput.setAttribute("data-error", "");
+		showError(emailInput, emailInputErrorBox);
+	}
+});
+phoneNumberInput.addEventListener("input", (e) => {
+	phoneNumberInputErrorBox.textContent = "";
+
+	if (phoneNumberInput.validity.valid) {
+		phoneNumberInputErrorBox.textContent = "";
+		phoneNumberInput.removeAttribute("data-error");
+	} else {
+		phoneNumberInput.setAttribute("data-error", "");
+		showError(phoneNumberInput, phoneNumberInputErrorBox);
+	}
+});
+messageTextArea.addEventListener("input", (e) => {
+	messageTextAreaErrorBox.textContent = "";
+
+	if (messageTextArea.validity.valid) {
+		messageTextAreaErrorBox.textContent = "";
+		messageTextArea.removeAttribute("data-error");
+	} else {
+		messageTextArea.setAttribute("data-error", "");
+		showError(messageTextArea, messageTextAreaErrorBox);
+	}
+});
+
+contactForm.addEventListener("submit", (e) => {
+	const isValid = validateForm();
+	if (!isValid) {
+		e.preventDefault();
+	}
+});
+function showError(input, errorBox) {
+	if (input.validity.valueMissing) {
+		errorBox.textContent += `${article(input.name)} ${input.name} is required.`;
+	}
+	if (input.validity.typeMismatch) {
+		errorBox.textContent += `${article(input.name)} ${input.name} is not valid.`;
+	}
+}
+function validateForm() {
+	const inputs = document.querySelectorAll("input,textarea");
+	inputs.forEach((input) => {
+		if (!input.validity.valid) {
+			return false;
+		}
+	});
+}
+function article(word) {
+	return word.match(/^[aeiou]/) ? "An" : "A";
+}

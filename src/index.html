@@ -146,9 +146,9 @@
 		</header>
 		<section
 			id="services"
-			class="py-16 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+			class="py-20 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800"
 		>
-			<div class="container">
+		ss="container">
 				<hgroup class="text-center space-y-6">
 					<h2 class="uppercase text-4xl font-bold lg:text-5xl">services</h2>
 					<p class="font-serif italic font-medium lg:text-lg">Lorem ipsum dolor sit amet consectetur.</p>
@@ -182,11 +182,11 @@
 						</hgroup>
 					</div>
 				</div>
-			</div>
+			</ss=>
 		</section>
 		<section
 			id="portfolio"
-			class="py-16 relative z-0 bg-slate-100 [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+			class="py-20 relative z-0 bg-slate-100 [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800"
 		>
 			<div class="container">
 				<hgroup class="text-center space-y-5">
@@ -203,8 +203,7 @@
 		</section>
 		<section
 			id="about"
-			class="py-16 relative z-0 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
-		>
+			class="py-20 relative z-0 bg-white [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800">
 			<div class="container">
 				<hgroup class="text-center space-y-5">
 					<h2 class="uppercase text-4xl font-bold lg:text-5xl">about</h2>
@@ -220,7 +219,7 @@
 		</section>
 		<section
 			id="team"
-			class="py-16 relative z-0 bg-slate-100 [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800 lg:py-20"
+			class="py-20 relative z-0 bg-slate-100 [&_:where(h1,h2,h3,h4,h5,h6)]:text-zinc-800"
 		>
 			<div class="container">
 				<hgroup class="text-center space-y-6">
@@ -243,30 +242,116 @@
 			class="py-16 relative z-0 bg-white"
 		>
 			<div class="container flex flex-col gap-12 items-center lg:flex-row lg:justify-between">
-				<div class="w-64">
+				<a href="#" class="w-64 block">
 					<img
 						src="./assets/img/logos/microsoft.svg"
 						alt="microsoft"
 					/>
-				</div>
-				<div class="w-44">
+				</a>
+				<a href="#" class="w-44 block">
 					<img
 						src="./assets/img/logos/google.svg"
 						alt="google"
 					/>
-				</div>
-				<div class="w-60">
+				</a>
+				<a href="#" class="w-60 block">
 					<img
 						src="./assets/img/logos/facebook.svg"
 						alt="facebook"
 					/>
-				</div>
-				<div class="w-36">
+				</a>
+				<a href="#" class="w-36 block">
 					<img
 						src="./assets/img/logos/ibm.svg"
 						alt="ibm"
 					/>
-				</div>
+				</a>
+			</div>
+		</section>
+		<section class="py-20 relative z-0 bg-secondary bg-[image:url('./assets/img/map-image.png')] bg-cover bg-center">
+			<div class="container">
+				<form action="/" novalidate id="contactForm">
+					<hgroup class="text-center space-y-5">
+						<h2 class="text-4xl text-white uppercase font-bold lg:text5xl">contact us</h2>
+						<p class="text-zinc-400 font-serif italic lg:text-lg">Lorem ipsum dolor sit amet consectetur.</p>
+					</hgroup>
+					<div class="flex flex-col gap-8 lg:flex-row lg:[&>*]:flex-1 mt-16">
+						<div class="space-y-6">
+							<div>
+								<div class="relative">
+									<input
+										type="text"
+										placeholder="Your Name *"
+										name="username"
+										id="username"
+										required
+										class="peer text-zinc-800 placeholder:text-zinc-400 placeholder:font-bold w-full py-5 px-4 rounded-md data-[error]:border-2 data-[error]:border-red-500 focus:outline-none focus-visible:outline-none data-[error]:focus:border-2 data-[error]:focus:border-yellow-500"
+									/>
+									<div
+										class="absolute text-red-500 top-1/2 -translate-y-1/2 right-2 w-6 scale-75 aspect-square border-[2.5px] border-red-500 rounded-full grid place-items-center opacity-0 peer-data-[error]:opacity-100"
+									>
+										<i class="fa-solid fa-exclamation p-0.5"></i>
+									</div>
+								</div>
+								<p class="errorBox text-red-500 text-sm"></p>
+							</div>
+							<div>
+								<div class="relative">
+									<input
+										type="email"
+										placeholder="Your Email *"
+										name="email"
+										id="email"
+										required
+										class="peer text-zinc-800 placeholder:text-zinc-400 placeholder:font-bold w-full py-5 px-4 rounded-md data-[error]:border-2 data-[error]:border-red-500 focus:outline-none focus-visible:outline-none data-[error]:focus:border-2 data-[error]:focus:border-yellow-500"
+									/>
+									<div
+										class="absolute text-red-500 top-1/2 -translate-y-1/2 right-2 w-6 scale-75 aspect-square border-[2.5px] border-red-500 rounded-full grid place-items-center opacity-0 peer-data-[error]:opacity-100"
+									>
+										<i class="fa-solid fa-exclamation p-0.5"></i>
+									</div>
+								</div>
+								<p class="errorBox text-red-500 text-sm"></p>
+							</div>
+							<div>
+								<div class="relative">
+									<input
+										type="tel"
+										placeholder="Your Phone *"
+										name="phone number"
+										id="phoneNumber"
+										required
+										class="peer text-zinc-800 placeholder:text-zinc-400 placeholder:font-bold w-full py-5 px-4 rounded-md data-[error]:border-2 data-[error]:border-red-500 focus:outline-none focus-visible:outline-none data-[error]:focus:border-2 data-[error]:focus:border-yellow-500"
+									/>
+									<div
+										class="absolute text-red-500 top-1/2 -translate-y-1/2 right-2 w-6 scale-75 aspect-square border-[2.5px] border-red-500 rounded-full grid place-items-center opacity-0 peer-data-[error]:opacity-100"
+									>
+										<i class="fa-solid fa-exclamation p-0.5"></i>
+									</div>
+								</div>
+								<p class="errorBox text-red-500 text-sm"></p>
+							</div>
+						</div>
+						<div class="">
+							<div class="relative lg:h-full">
+								<textarea
+									class="peer min-h-40 lg:h-full text-zinc-800 placeholder:text-zinc-400 placeholder:font-bold w-full py-4 px-4 rounded-md data-[error]:border-2 data-[error]:border-red-500 focus:outline-none focus-visible:outline-none data-[error]:focus:border-2 data-[error]:focus:border-yellow-500"
+									name="message"
+									id="message"
+									placeholder="Your Message *"
+									rows="6"
+								></textarea>
+								<div
+									class="absolute text-red-500 top-1/2 -translate-y-1/2 right-2 w-6 scale-75 aspect-square border-[2.5px] border-red-500 rounded-full grid place-items-center opacity-0 peer-data-[error]:opacity-100"
+								>
+									<i class="fa-solid fa-exclamation p-0.5"></i>
+								</div>
+							</div>
+							<p class="errorBox text-red-500 text-sm"></p>
+						</div>
+					</div>
+					<button class="p-5 px-8 block mx-auto mt-8 rounded-md uppercase text-lg bg-primary/80 text-white font-bold">send message</button>
+				</form>
 			</div>
 		</section>
 		<dialog
