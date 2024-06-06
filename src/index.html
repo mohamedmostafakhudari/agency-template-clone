@@ -46,35 +46,38 @@
 						</div>
 						<!-- Desktop -->
 						<ul class="hidden gap-8 lg:flex">
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li
+								data-selected
+								class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary"
+							>
 								<a
 									href="#services"
 									class="py-2 block"
 									>services</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#portfolio"
 									class="py-2 block"
 									>portfolio</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#about"
 									class="py-2 block"
 									>about</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#team"
 									class="py-2 block"
 									>team</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#contact"
 									class="py-2 block"
@@ -97,35 +100,38 @@
 						class="bg-secondary left-0 top-full inset-x-0 data-[idle]:max-h-0 data-[active]:max-h-[1000px] overflow-hidden transition-all data-[idle]:duration-[400ms] data-[idle]:ease-out data-[active]:duration-700 data-[active]:ease-in block lg:hidden"
 					>
 						<ul class="py-6">
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li
+								data-selected
+								class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary"
+							>
 								<a
 									href="#services"
 									class="py-2 block"
 									>services</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#portfolio"
 									class="py-2 block"
 									>portfolio</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#about"
 									class="py-2 block"
 									>about</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#team"
 									class="py-2 block"
 									>team</a
 								>
 							</li>
-							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary">
+							<li class="text-sm text-white uppercase tracking-widest transition hover:text-primary data-[selected]:text-primary">
 								<a
 									href="#contact"
 									class="py-2 block"
@@ -281,7 +287,10 @@
 				</a>
 			</div>
 		</section>
-		<section class="py-20 relative z-0 bg-secondary bg-[image:url('./assets/img/map-image.png')] bg-cover bg-center">
+		<section
+			id="contact"
+			class="py-20 relative z-0 bg-secondary bg-[image:url('./assets/img/map-image.png')] bg-cover bg-center"
+		>
 			<div class="container">
 				<form
 					action="/"
@@ -352,6 +361,7 @@
 						<div class="">
 							<div class="relative lg:h-full">
 								<textarea
+									required
 									class="peer min-h-40 lg:h-full text-zinc-800 placeholder:text-zinc-400 placeholder:font-bold w-full py-4 px-4 rounded-md data-[error]:border-2 data-[error]:border-red-500 focus:outline-none focus-visible:outline-none data-[error]:focus:border-2 data-[error]:focus:border-yellow-500"
 									name="message"
 									id="message"

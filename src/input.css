@@ -8,7 +8,7 @@
 }
 html,
 body {
-	@apply text-slate-500;
+	@apply text-slate-500 scroll-smooth scroll-pt-20;
 }
 @layer utilities {
 	.text-huge {

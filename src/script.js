@@ -33,7 +33,6 @@ class Modal {
 		desc.textContent = data.desc;
 		client.textContent = data.client;
 		category.textContent = data.category;
-		console.log(projectName, subheading, img, desc, client, category);
 	}
 	closeDialog() {
 		this.dialog.classList.remove("animate-fadeIn");
@@ -66,6 +65,70 @@ window.addEventListener("scroll", () => {
 	} else {
 		nav.setAttribute("data-shrink", "");
 	}
+});
+/* nav interactivity */
+class Navbar {
+	constructor() {
+		this.queryDOM.bind(this)();
+		this.bindEvents.bind(this)();
+	}
+	queryDOM() {
+		this.navItems = document.querySelectorAll("nav li");
+		this.navList = document.querySelector("nav ul");
+		this.menuList = document.querySelector("nav #menu ul");
+	}
+	bindEvents() {
+		this.navItems.forEach((item) => {
+			item.addEventListener("click", (e) => {
+				const mobile = e.target.closest("#menu");
+				const target = e.target.closest("li");
+				if (!target) return;
+
+				if (mobile) {
+					const itemIndex = [...this.menuList.children].indexOf(target);
+					this.selectMenuItem(itemIndex);
+				} else {
+					const itemIndex = [...this.navList.children].indexOf(target);
+					this.selectNavItem(itemIndex);
+				}
+			});
+		});
+	}
+	selectNavItem(index) {
+		this.resetNav(this.navList);
+		console.log(index);
+		this.navList.children[index].setAttribute("data-selected", "");
+	}
+	selectMenuItem(index) {
+		this.resetNav(this.menuList);
+		this.menuList.children[index].setAttribute("data-selected", "");
+	}
+	resetNav(list) {
+		[...list.children].forEach((item) => {
+			item.removeAttribute("data-selected");
+		});
+	}
+}
+const navbar = new Navbar();
+
+const sections = document.querySelectorAll("section:not(#brands)");
+const observer = new IntersectionObserver(
+	(entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const sectionIndex = [...sections].indexOf(entry.target);
+				navbar.selectNavItem(sectionIndex);
+				navbar.selectMenuItem(sectionIndex);
+			}
+		});
+	},
+	{
+		rootMargin: "0px",
+		threshold: 0.3,
+	}
+);
+sections.forEach((section) => {
+	observer.observe(section);
 });
 /* portfolio gallery */
 
@@ -362,6 +425,12 @@ const emailInputErrorBox = emailInput.parentElement.parentElement.querySelector(
 const phoneNumberInputErrorBox = phoneNumberInput.parentElement.parentElement.querySelector(".errorBox");
 const messageTextAreaErrorBox = messageTextArea.parentElement.parentElement.querySelector(".errorBox");
 
+const inputs = [
+	[nameInput, nameInputErrorBox],
+	[emailInput, emailInputErrorBox],
+	[phoneNumberInput, phoneNumberInputErrorBox],
+	[messageTextArea, messageTextAreaErrorBox],
+];
 nameInput.addEventListener("input", (e) => {
 	nameInputErrorBox.textContent = "";
 
@@ -411,8 +480,14 @@ contactForm.addEventListener("submit", (e) => {
 	const isValid = validateForm();
 	if (!isValid) {
 		e.preventDefault();
+		showErrors();
 	}
 });
+function showErrors() {
+	for (const [input, errorBox] of inputs) {
+		showError(input, errorBox);
+	}
+}
 function showError(input, errorBox) {
 	if (input.validity.valueMissing) {
 		errorBox.textContent += `${article(input.name)} ${input.name} is required.`;
