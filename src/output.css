@@ -799,6 +799,26 @@ video {
   width: 16rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-44 {
+  width: 11rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -913,6 +933,14 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1122,6 +1150,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .pb-12 {
