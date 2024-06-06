@@ -851,6 +851,14 @@ video {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -1144,6 +1152,10 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
 .bg-\[image\:url\(\'\.\/assets\/img\/header-bg\.jpg\'\)\] {
   background-image: url('./assets/img/header-bg.jpg');
 }
@@ -1414,6 +1426,11 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-zinc-600 {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity));
 }
 
 .opacity-0 {

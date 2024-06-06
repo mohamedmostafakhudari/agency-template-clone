@@ -297,7 +297,7 @@ class Team {
 	</div>
 	<div class="flex items-center gap-6 mt-5">
 		<div class="relative group">	
-			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<div class="pointer-events-none absolute inset-0 bg-white/20 opacity-0 duration-200 group-hover:opacity-100"></div>
 			<a
 				href="#"
 				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
@@ -306,7 +306,7 @@ class Team {
 			</a>
 		</div>
 		<div class="relative group">	
-			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<div class="pointer-events-none absolute inset-0 bg-white/20 opacity-0 duration-200 group-hover:opacity-100"></div>
 			<a
 				href="#"
 				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
@@ -315,7 +315,7 @@ class Team {
 			</a>
 		</div>
 		<div class="relative group">	
-			<div class="pointer-events-none absolute inset-0 bg-white/10 opacity-0 duration-200 group-hover:opacity-100"></div>
+			<div class="pointer-events-none absolute inset-0 bg-white/20 opacity-0 duration-200 group-hover:opacity-100"></div>
 			<a
 				href="#"
 				class="text-white bg-secondary grid place-items-center w-12 aspect-square rounded-full"
